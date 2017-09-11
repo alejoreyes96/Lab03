@@ -61,8 +61,9 @@ public class ArrayIndexList<E> implements IndexList<E> {
 		if(element.length>size+1)
 			changeCapacity(-CAPTOAR);
 		E elementRemoved = element[index];
-		if(index<size-1)
+		if(index<size-1){
 			moveDataOnePositionTL(index+1, size-1);
+		}
 		
 		size--;
 		return elementRemoved;
